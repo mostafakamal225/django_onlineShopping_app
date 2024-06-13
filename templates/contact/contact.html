@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% comment %} <link rel='stylesheet' type='text/css' media='screen' href='aboutus.css'> {% endcomment %}
+    <link href="{% static 'css/aboutus.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="cover1">
+       
+        <ul>
+          
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+        </ul>
+
+    
+    
+
+    <div style="padding-bottom: 350px;text-align: center;padding-top: 200px;" class="covertext">
+        
+    <div class="behaind" style="text-align: center;margin-left: 400px;"><h1 class="fontbig"> contact informations </h1>   </div>    
+    <h2>Welcome to our Contact Us page! Here, you can get in touch with us for any questions</h2>
+    <h2>   , concerns, or feedback you may have regarding our clothing website</h2>
+        <button class="btn1"><a style="text-decoration: none;color: azure;" href="https://web.whatsapp.com/">Contact Us</a></button>
+       
+      </div>
+
+    </div>
+</div>
+
+<div  class="mm">
+    <div class="container_l ">
+       
+         <div class="card behaind">
+            <img alt="ph" style="height: 50px; width: 50px; padding-left: 10px;padding-top: 30px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEtklEQVR4nNVaz2/bVBw3ldgmdX9A2QRjgIREUfzcpUvS5UfTtCKJ/X64lbXLRE/bYReEpsHGgSA4cOCAxAU0ISQ4cOIEB6Q5TRFUjLIxxM/9aKchNqQNNFa1Tey0Y0HfsEa2Zye258ThSV8psb/v+fOx3/v+eo/jAmiNfH57VRR312X52SrGcU2WJzSM85uyLILAb7gG95o6orgb+nBhtoaibNMw3rtBaUqnFPuRGqUpGAPG6h3w2dkd9ZmZYZ3Sol/gNlKsYzwMY3cNeInjBjRRfEJnrBAgcGwlohPydKNUGggU/E1F2VljLNNF4Ng0tSQp0zh0aDAQ8Ouy/EiX3zq2FcYKDUUZeiDwNUof1RmTeg6etkhIjenpPf7AT0/v+TGZfKOM0N8qzzecZI7n//w5mXy1m0Q0jPf6mTZSGaG/2oE3kLjV9S+huJxOjampwa057wb8lvRoTexsD75UGjBam74iQCneICQN5tyRgIbxU8YO/UZAh/XA2JP2b392dofVu6o8f7ffCOiMFa5mMvd77HvhgUm5zPOrfUeAUryG8bD57SvKNrvYpiII1/qRgE5p0RQAgp21U/xqZGSxTwlgjdLHWwScQuJvY7EP+5VAjdJUEzwsCCely+n0S27AA9FeE9Apxc2kCLIjJ4UqIWSujTc+zfN3z8Vi74cBXgcChOziIMVrp/TN6OgntgQikX++TyTeCQu8TimGJIiDPLWd0h+Tk4fVSOSO6c1HInd+GBt7K0zw+n+eOcZplOY6KS5Eo/NGAhVBuBI2eB0skSxPgAnNd1K8mssdtX6FXzOZk6EToPQ5TidEdKN8ZnT0U9NXQOjGiigqoZIgRHRN4JYkHSzzvCm5WYhGT4dOQHMxhbbkwoEDr4HpNJI4G4+fCnUKbcryhJdOX0ejn1nN6S/J5OuhLeJqBzNqldVCYaaC0JLFL9QvpNOvhGJG6x0cmZ3cLBSet8mXa0vj48d678hE51CinSyPj79QjkSqRhLw/2IqdaJXBKoQSkBA5HeA5Wz2uMrzmokEz+uw2Dv1XYzFPjL02ywjtGaVL0ZGli6m0y87jdGqcENo6pcEODQrCXB65xKJ95z6fBePn3IbplcQumE3xgZjyY4JjVu5ks2+WOb5FevDF6LRz1clacaoCwGg1RSrPnINU0LjlFJ6EQj6KoJw3frwOUG4DnkF6EAACGbXC3jVnoA5pWwm9Rjfl9R7lRVJOvjlvn1n7EDMC8IyRLFewat2BAh5xlVZxZcQQs7u3/+BilDdD1i1EwGo0DltT1kLWw8iv+dyR+cF4VLQBDSnwhY0KNtB+S4oEpCSnk8k3i4jdDsIArVOpUVrcTcogUh2MRb72EuhTLUSYKwAO0VtwRus0lA3NjYgfzifSLzrZWqVEboNWNaLxSHPGxxBEzDKtcnJw0AG0tV5hH6z8yMA/qexsTdrkvSYJ/D9tMVU87vFZJlOoWzyrXudNo4kpqYGg7ROnaRGSBqeGQj4FgmOe+h/u9FtbFBLvRd2BHrUYA2OGvTyAEjrsAdjSb/ANxhLQlTZOHLk4Z4Bt2uX8/ntUGiFLwN56iYh2Wa1A0o2hDSP28A1uNc81EHILugTxMP/BfZCCq3K9RBXAAAAAElFTkSuQmCC">
+            <div style="margin-left: 10px;">
+                <h2>phone number</h2>
+                <h3>+123 456 789</h3>
+            </div>
+       
+        </div>
+
+        <div class="card behaind">
+            <img alt="ph" style="height: 50px; width: 50px; padding-left: 10px;padding-top: 30px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXklEQVR4nMWXzW7TQBDHN/AG6QW4pqhtKsWq69ZV4lPVGlXbHY+D/BQ8RE8gDly4cIEDD4A4caGRAEH5VCvUPgEX7qFg2U2hRrOQtnHX8TrEYaS/FK2989vMzs6OGdOwhLHKN8Sp70LM9xCdY0T32Pe5FKJLYzFAPQmCKr2r43OoJUFwORJiOvK8G7HnCR3RQmgOzWWjWAhwLRJiXReYVgSwlvj+1ULQGGBmVOAFIc7lhp9e6CEujg36VyHi4lA4rW7c0FNtbs5m7mlpUO+PfqT3XGYvwFrZ4EiI9YFsjzm/XjY0PoNPnyZU+pyGANDlPHi1sPC5YxjJKKK55IN8DYARXZloCeJUelX7zeadvWbz/iHn/hvT3CkKfW2aHw83Nm7uO869g1brdto/VTh2JMR8+sGB49zdNoyTXdt+FCJ6by3ruS50x7Jehp6HeysrDzqGcUK+LoQcoM5knVWA+44+LC09iQHg/fLy0zzoO8t6RqH9ZNuP+2MqcK/dbjFVHT4PznKYVtYCVeAI0aXyyPPAqhD2x/O2JCPUXBucTprtRuNnp9H4lZeEmeBII9SqY/JldfUWKe/YZYa6l5NcKr0wjK+7tv2QRL+HvatMLiFaFOp6UXARKUONOEd1ujppcNd1q7JkUrsyKXDUL5lkVLgndkkg1s6uxa2tS//lWiSjxqxscBIEV5jK4nZ7tjQwwIwSKv81YxVqzMYNPfJ9U6vRn3h7e96oMfuXhJMNfdaeshyT2Y5Yo7OnDaRPGMQazR0JOrAAxiqywgHU6RKXC6FbDYDTbxqjZ90CH22/Ac5qmaxU/S6JAAAAAElFTkSuQmCC">
+            <div style="margin-left: 10px;">
+                <h2>Email Address</h2>
+                <h3>company22@gmail.com</h3>
+            </div>
+       
+        </div>
+
+        <div class="card behaind">
+            <img alt="ph" style="height: 50px; width: 50px; padding-left: 10px;padding-top: 30px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEtklEQVR4nNVaz2/bVBw3ldgmdX9A2QRjgIREUfzcpUvS5UfTtCKJ/X64lbXLRE/bYReEpsHGgSA4cOCAxAU0ISQ4cOIEB6Q5TRFUjLIxxM/9aKchNqQNNFa1Tey0Y0HfsEa2Zye258ThSV8psb/v+fOx3/v+eo/jAmiNfH57VRR312X52SrGcU2WJzSM85uyLILAb7gG95o6orgb+nBhtoaibNMw3rtBaUqnFPuRGqUpGAPG6h3w2dkd9ZmZYZ3Sol/gNlKsYzwMY3cNeInjBjRRfEJnrBAgcGwlohPydKNUGggU/E1F2VljLNNF4Ng0tSQp0zh0aDAQ8Ouy/EiX3zq2FcYKDUUZeiDwNUof1RmTeg6etkhIjenpPf7AT0/v+TGZfKOM0N8qzzecZI7n//w5mXy1m0Q0jPf6mTZSGaG/2oE3kLjV9S+huJxOjampwa057wb8lvRoTexsD75UGjBam74iQCneICQN5tyRgIbxU8YO/UZAh/XA2JP2b392dofVu6o8f7ffCOiMFa5mMvd77HvhgUm5zPOrfUeAUryG8bD57SvKNrvYpiII1/qRgE5p0RQAgp21U/xqZGSxTwlgjdLHWwScQuJvY7EP+5VAjdJUEzwsCCely+n0S27AA9FeE9Apxc2kCLIjJ4UqIWSujTc+zfN3z8Vi74cBXgcChOziIMVrp/TN6OgntgQikX++TyTeCQu8TimGJIiDPLWd0h+Tk4fVSOSO6c1HInd+GBt7K0zw+n+eOcZplOY6KS5Eo/NGAhVBuBI2eB0skSxPgAnNd1K8mssdtX6FXzOZk6EToPQ5TidEdKN8ZnT0U9NXQOjGiigqoZIgRHRN4JYkHSzzvCm5WYhGT4dOQHMxhbbkwoEDr4HpNJI4G4+fCnUKbcryhJdOX0ejn1nN6S/J5OuhLeJqBzNqldVCYaaC0JLFL9QvpNOvhGJG6x0cmZ3cLBSet8mXa0vj48d678hE51CinSyPj79QjkSqRhLw/2IqdaJXBKoQSkBA5HeA5Wz2uMrzmokEz+uw2Dv1XYzFPjL02ywjtGaVL0ZGli6m0y87jdGqcENo6pcEODQrCXB65xKJ95z6fBePn3IbplcQumE3xgZjyY4JjVu5ks2+WOb5FevDF6LRz1clacaoCwGg1RSrPnINU0LjlFJ6EQj6KoJw3frwOUG4DnkF6EAACGbXC3jVnoA5pWwm9Rjfl9R7lRVJOvjlvn1n7EDMC8IyRLFewat2BAh5xlVZxZcQQs7u3/+BilDdD1i1EwGo0DltT1kLWw8iv+dyR+cF4VLQBDSnwhY0KNtB+S4oEpCSnk8k3i4jdDsIArVOpUVrcTcogUh2MRb72EuhTLUSYKwAO0VtwRus0lA3NjYgfzifSLzrZWqVEboNWNaLxSHPGxxBEzDKtcnJw0AG0tV5hH6z8yMA/qexsTdrkvSYJ/D9tMVU87vFZJlOoWzyrXudNo4kpqYGg7ROnaRGSBqeGQj4FgmOe+h/u9FtbFBLvRd2BHrUYA2OGvTyAEjrsAdjSb/ANxhLQlTZOHLk4Z4Bt2uX8/ntUGiFLwN56iYh2Wa1A0o2hDSP28A1uNc81EHILugTxMP/BfZCCq3K9RBXAAAAAElFTkSuQmCC">
+            <div style="margin-left: 10px;">
+                <h2>Fax Address</h2>
+                <h3>+123 456 789</h3>
+            </div>
+       
+        </div>
+
+        <div class="card behaind">
+            <img alt="ph" style="height: 50px; width: 50px; padding-left: 10px;padding-top: 30px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEw0lEQVR4nNVaTWwbRRRe3LheJVYURZUaHKVtQgGFIPXAAQ72rn8T27vzswkGCUXKrVx6pJwAC8EBhBACIcGtl0r8SHCouPEj1FspHECFigIqBwTqpUWqY6/t3S5629b4Z3bXM7uJ25GetNrdN+97M2/evPdmJCmC5pTLiV1NW2wbxuO7CD3VMox8C6Fy1zA0IHiGd/DN/UfTFoFHmmRzarWDLYSWO4RkTEKQCDUJyUAf0Nf+Ad/ZkdtbW2smIVVR4AyqthFag773DHhdkmItTVsxKa1ECBwNK2Ji/KhTr8ciBX+tVks2KVX3EDgaMC1dV53t7ZlIwDcM48E9HnXEJEorTq22EAp8k5Alk1J938GTnhK6s7l5VAz85ubRiQEngwSeSsRsJjfyhDET45qTUyrNTMTmyVhrIukPvl6PhfU2VuXEKTt36IytTp+3lcQll+A5d+hMp3LiVJi+Oxgr4M49FWghdFwY+Mbxl2018YuTkRxfUhM/W6WHXxJeD5Q+xB79nR1ZaHfV17fs7Oy5QOBDZGeT37RxqSZiSldVdXTHvhMecHUGAMYadS9SEpdMrfQ0r9ybCK0Njn6tdpB79DHGtip/Lwz+7kyo8nfQF6cS1YEAEPws7yh086l3fcGlD/xtK9PfupQ58I/fv91c6h3utUDIsZ4CvCFxl+jUScdusAHFGt3CkTdGZqu49CZ8Y85CJnbdJDrlDcVd8LAgeLW3S8uvMoGkJctaX33Bi8/aWD3tpCWLxWsVV+q8ONykCLIjbgXU2S88PMuXwbzJr9i8s+e4FcA4JUGKx82oyheYINaXXwuevWOvM3kV+QIvDkiCJMhTuRXIxC+zQHQ2Vk8H8bpmxFw78cu8ODoYPym1CClwm5AiX2SOYmHprSDebn7xbfYOLXPPABQKwIWWuRXIz3/C3pjki2OY3w9M5XPzH3ErQMiGZGKs8TJapUde9NyYCt4+3fbZOywf7+VJGGtCCtxeB1N/eoC5ZWfnPmtX09t3/4VnOzv3OXxj80xdFcHgKiBiQu5oFg5/6L8TS7ajTP3lEjz7hRO5wx+IYHBNqGsYeRHmtl541s7E/g2KdQIpHbvRRsVnhBSARSziRnuzkFt4P6wCdjH1nqh8142KbGR9NogdJf6bMHgl/odJERGVf3sjEwglGPGNr417rRFLxPP00S6EEhAQhenENaXs3Kfco5+b/zis3F6FG0LTcJ3p1FHiv46tgBL/3dTKRhiZHUrToRKakQ6rTzzvFe8PUqwB/4aV1+pPaIRSSpYSxZVXAtbDLcglwsoxh1NKN6lHiDupZ66H3PxZH7s/G4UME+PHoiurjHaOnWzy6xHw6vR5geQdMSt0XsdTYQpbA6SVDTuT+Ol/f5/4MeyiNYMKW9CgbAfluygEuTUjN/GJXxENFcwhagaVFqMu7rZ15TmgSGaV0gqcFPmC7/NKC/daeb1RrS7ctwccTV0/wgX+XjpiaooeMQ2Z00QO+Rq8ZuOpRKk0E5V3GstkMFZAZiTge0pI0gP37UF3f4Na6p2wI9KrBjfhqsF+XgDpXfagNC0KvENpGqJK5+TJ+L4BZ7Ur5XICCq0wM5CndjHOudUOKNlg7F63gXfwzb3UgXEKeKIQ/h/DBTV+CSr2xwAAAABJRU5ErkJggg==">
+            <div style="margin-left: 10px;">
+                <h2>Location</h2>
+                <h3>13 elharam street </h3>
+            </div>
+       
+        </div>
+    
+    
+    </div>
+    
+    
+    <div class="container_2">
+        <h1>send message</h1>
+    <h3>Fashion takes a big place in the minds of people, especially celebrities. </h3>
+    <h3>where they show us the personality of the person who wears them.</h3>
+    <div>
+      {% block content %}  
+      <form method="POST">
+          {% csrf_token %} 
+          <input class="inp" type="text" placeholder="Your name"  name="name" >
+          <input class="inp" type="text" placeholder="Email Address"   name="email" >
+          <input class="inp" type="text" placeholder="Phone Number"   name="phone" >
+          <input class="inp" type="text"  placeholder="Subject"   name="subject" >
+          <input class="inp" type="text" placeholder="message"  name="message">
+          <button class="inp btn"> Send Message</button>
+
+        </form>
+        {% endblock %}
+    </div>
+
+</div>
+        
+
+
+
+</div>
+
+<div class="map">
+    <h1 >Find us in google map</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3455.4286867332194!2d31.167687124866628!3d29.995844820872534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1691158932038!5m2!1sar!2seg" width="1115" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<footer class="footer" style="font-family: 'Poppins', sans-serif; line-height: 1.5;	">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">shipping</a></li>
+          <li><a href="#">returns</a></li>
+          <li><a href="#">order status</a></li>
+          <li><a href="#">payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">watch</a></li>
+          <li><a href="#">bag</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">dress</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    </body>
+</html>

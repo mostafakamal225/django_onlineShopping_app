@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% comment %} <link rel='stylesheet' type='text/css' media='screen' href='men.css'> {% endcomment %}
+    <link href="{% static 'css/men1.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+   
+</head>
+<body>
+    <div class="cover11">
+        <ul>
+          
+           
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+    <div style="margin-top: 50px; margin-bottom: 50px;" class="slideshow-container">
+
+      <div class="mySlides fade">
+       
+        <img alt="ph" src=" {% static 'img/retro-man-dressed-shirt-lies-floor-posing.jpg' %}     " style="width:100%;height: 900px;">
+       
+      </div>
+      
+      <div class="mySlides fade">
+       
+        <img alt="ph" src=" {% static 'img/portrait-male-wearing-cap-sitting.jpg' %}        " style="width:100% ;height: 900px;">
+       
+      </div>
+      
+      <div  class="mySlides fade">
+        
+        <img alt="ph" src=" {% static 'img/dark-portrait-handsome-man.jpg' %}      " style="width:100% ;height: 900px;">
+        
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div> -->
+
+      <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+
+
+
+
+
+            
+           <div style="background-color: rgba(0, 0, 0, 0.3);" class="container">
+            <div class="row">
+              
+              {% block content %}
+                {% for post in posts %}
+
+
+              <div style="margin-top: 20px;margin-bottom: 25px; margin-left: 28px; margin-right: 28px;" class="col-md-3">
+                <div style="height: 400px; margin-bottom: 10px;"  class="card ">
+                  <img style="height: 250px; width:175px"  class="card-img-top" src="{{ post.image.url }}   " alt="polo shirt">
+                  <div style="text-align: center;" class="card-body">
+                    <h5 style="margin-top: 20px;"  class="card-title" >{{post.name}}</h5>
+                    <h5 style="margin-top: 20px;"   class="card-title" >{{post.catagry}}</h5>
+                    <p style="margin-top: 20px;color:red"  style="" class="card-text">{{post.descrip}}</p>
+                    <p style="margin-top: 20px;"  class="ppp"  style="padding-top: 10px;">{{ men.descrip|truncatewords:30 }} <a href="{% url 'product' men_id=post.pk %}">Read more</a></p>
+                    {% comment %} <p>{{ post.descrip|truncatewords:30 }} <a href="{% url 'blog_detail' post_id=post.pk %}">Read more</a></p> {% endcomment %}
+                  </div>
+                </div>
+              </div>
+
+
+              {% endfor %}
+              {% endblock %}              
+             
+
+              
+                </div>
+            </div>
+
+
+           <footer class="footer" style="font-family: 'Poppins', sans-serif; line-height: 1.5;	margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div  class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
+
+</body>
+</html>

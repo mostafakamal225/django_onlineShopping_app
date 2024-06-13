@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cart.css'>
+
+    <script>
+        let number = 0;
+        let number1 = 0;
+        let number2 =0
+        let total = 0;
+        let total1 = 0;
+        let total2 =0
+        let pricepolo =400;
+    
+        function increment() {
+          number++;
+          document.getElementById("number").innerHTML = number; 
+          totalFun();
+        }
+    
+        function decrement() {
+        
+          
+            if(number<=0){
+                return;
+            }
+            else{
+                number--; 
+                document.getElementById("number").innerHTML = number;
+          totalFun();
+            }
+          
+        }
+        function totalFun(){
+            
+                // total.getElementById("total") =pricepolo.value * number.value ;
+                total=pricepolo *number ;
+
+                document.getElementById("total").innerHTML =total;
+            
+        }
+
+
+        function increment1() {
+          number1++;
+          document.getElementById("number1").innerHTML = number1; 
+          totalFun1();
+        }
+    
+        function decrement1() {
+            if(number1<=0){
+                return;
+            }
+            else{
+                number1--; 
+          document.getElementById("number1").innerHTML = number1;
+          totalFun1();
+            }
+          
+        }
+        function totalFun1(){
+            
+                // total.getElementById("total") =pricepolo.value * number.value ;
+                total1=650 *number1 ;
+
+                document.getElementById("total1").innerHTML =total1;
+            
+        }
+
+
+
+        function increment2() {
+          number2++;
+          document.getElementById("number2").innerHTML = number2; 
+          totalFun2();
+        }
+    
+        function decrement2() {
+            if(number2<=0){
+                return;
+            }
+            else{
+                number2--; 
+          document.getElementById("number2").innerHTML = number2;
+          totalFun2();
+            }
+          
+        }
+        function totalFun2(){
+            
+                // total.getElementById("total") =pricepolo.value * number.value ;
+                total2=550 *number2 ;
+
+                document.getElementById("total2").innerHTML =total2;
+            
+        }
+
+
+
+
+
+
+
+      </script>
+
+
+
+    
+</head>
+<body>
+    <div>
+        <ul>
+          
+            <li><a style="text-decoration: none;" class="active" href="home.html">Home</a></li>
+            <li><a style="text-decoration: none;" href="about.html">about</a></li>
+            <li><a style="text-decoration: none;" href="order.html">order review</a></li>
+            <li ><a style="text-decoration: none;"  href="blog.html">Blog</a></li>
+            <li ><a style="text-decoration: none;"  href="aboutus.html">contact</a></li>
+            <li > <a style="text-decoration: none;" style="padding-top: 8px;" href="cart.html"><img style="height: 35px;width: 40px;" src="images.jfif" alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none;" style="padding-top: 8px;" href="login.html"><img style="height: 35px;width: 40px;margin-right: 100px;margin-right: 50px;" src="icons8-registration-26.png" alt="ph"></a></li>
+        
+        </ul>
+    </div>
+    <div>
+        <ul id="ul1">
+          
+            <li><a id="a2" style="text-decoration: none;"  href="#">product</a></li>
+            <li><a id="a2" style="text-decoration: none;" href="#">price</a></li>
+            <li><a id="a2" style="text-decoration: none;" href="#">quantity </a></li>
+            <li ><a id="a2" style="text-decoration: none;"  href="#">total</a></li>
+            
+           
+          </ul>
+    </div>
+   
+   <div class="container">
+   
+   
+    <div class="flex">
+       
+        <img style="margin-left: 100px;" alt="ph" src="shopping (4).webp">
+        <div>
+            <h3>polo shirt</h3>
+            <h3 class="text2">It is made of thick, </h3>
+            <h3 class="text2">durable cotton fabric</h3>
+            </div>
+            <h3 class="price">400</h3>
+            <div class="quantity">
+                <button class="btn" onclick="increment()">+</button>
+  <span id="number">0</span>
+  <button class="btn" onclick="decrement()">-</button>
+            </div>
+            <div class="total" >
+                <span id="total">0</span>
+            </div>
+    <button class="logo">   <img alt="ph" class="lo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO2YTUhVQRTHf738olQUw02CPBIRNATBhQs1LXCT7mwVRO1ci6ILNwa5dSHoRnAltghxEbWplWJQILUJQnlggraoqEQLP54MzOJyOL3eh8ydcH4wmzvnnPnfOzNnzlwIBAKBQOCC0gr0A1cKjNMF9ACXcchjIG3bOnA1zzgTkTivgQSO+B4Z2LT5PGLcAU5FnCSO2BADmzaQg3818Fn47wAlOOIWcCIEfAFqs/RfEr6ndj85ZUqZhZUs/O4rftPEQJHdwFLMoww+dcA3Yf8BKCMmbgA/haB9oEGxTdhMI22biJmHyiysKnl9VLF7gCcsKuJGIv3NwKHof4pHVAEpIfC3Pa1LgfeibxOoxDM6gWMh1AifFc/+AO14yqSylGQbxmOKgLUM4l8Cl/CcJPBLEb+bw0kdKx3AkfICWz5uXEk58CnDEvIqdWosZLGJTS3kJfcUscvAnnj2w5YgXnEd+CqEbtu6v0+5uLx1Wfv/C1OkvRICzV2hO2Izo8zOEzxhTBFnDrQoZbZsli95m5hps6VBVNg7oFixbVEKuh3gGjFhfqd8VOr7xgw+I8psPY/rdJ7L8Tb2t/2SBoZwzIAi4lmWvnVKxjqwdwYnlNi1K9dyTQ4xBpUP8AJH1CvZxPykKvTUTuEIeTkfzzNOBfAmEsekY6d1f6+tPAvNZHeBm+ekKxAIBAIB/ivOAM2OAh166TcAAAAAAElFTkSuQmCC"> </button>      
+    
+</div>
+
+
+
+<div class="flex">
+       
+    <img style="margin-left: 100px;" alt="ph" src="shopping (5).webp">
+    <div>
+        <h3>t.shirt</h3>
+        <h3 class="text2">It is made of thick, </h3>
+        <h3 class="text2">durable cotton fabric</h3>
+        </div>
+        <h3 class="price">650</h3>
+        <div class="quantity">
+            <button class="btn" onclick="increment1()">+</button>
+<span id="number1">0</span>
+<button class="btn" onclick="decrement1()">-</button>
+        </div>
+        <div class="total" >
+            <span id="total1">0</span>
+        </div>
+<button class="logo">   <img alt="ph" class="lo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO2YTUhVQRTHf738olQUw02CPBIRNATBhQs1LXCT7mwVRO1ci6ILNwa5dSHoRnAltghxEbWplWJQILUJQnlggraoqEQLP54MzOJyOL3eh8ydcH4wmzvnnPnfOzNnzlwIBAKBQOCC0gr0A1cKjNMF9ACXcchjIG3bOnA1zzgTkTivgQSO+B4Z2LT5PGLcAU5FnCSO2BADmzaQg3818Fn47wAlOOIWcCIEfAFqs/RfEr6ndj85ZUqZhZUs/O4rftPEQJHdwFLMoww+dcA3Yf8BKCMmbgA/haB9oEGxTdhMI22biJmHyiysKnl9VLF7gCcsKuJGIv3NwKHof4pHVAEpIfC3Pa1LgfeibxOoxDM6gWMh1AifFc/+AO14yqSylGQbxmOKgLUM4l8Cl/CcJPBLEb+bw0kdKx3AkfICWz5uXEk58CnDEvIqdWosZLGJTS3kJfcUscvAnnj2w5YgXnEd+CqEbtu6v0+5uLx1Wfv/C1OkvRICzV2hO2Izo8zOEzxhTBFnDrQoZbZsli95m5hps6VBVNg7oFixbVEKuh3gGjFhfqd8VOr7xgw+I8psPY/rdJ7L8Tb2t/2SBoZwzIAi4lmWvnVKxjqwdwYnlNi1K9dyTQ4xBpUP8AJH1CvZxPykKvTUTuEIeTkfzzNOBfAmEsekY6d1f6+tPAvNZHeBm+ekKxAIBAIB/ivOAM2OAh166TcAAAAAAElFTkSuQmCC"> </button>      
+
+</div>
+
+
+
+
+<div class="flex">
+       
+    <img style="margin-left: 100px;" alt="ph" src="download (1).webp">
+    <div>
+        <h3>jogger pants</h3>
+        <h3 class="text2">It is made of thick, </h3>
+        <h3 class="text2">durable cotton fabric</h3>
+        </div>
+        <h3 style="margin-left: 200px;" class="price">550</h3>
+        <div class="quantity">
+            <button class="btn" onclick="increment2()">+</button>
+<span id="number2">0</span>
+<button class="btn" onclick="decrement2()">-</button>
+        </div>
+        <div class="total" >
+            <span id="total2">0</span>
+        </div>
+<button class="logo">   <img alt="ph" class="lo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO2YTUhVQRTHf738olQUw02CPBIRNATBhQs1LXCT7mwVRO1ci6ILNwa5dSHoRnAltghxEbWplWJQILUJQnlggraoqEQLP54MzOJyOL3eh8ydcH4wmzvnnPnfOzNnzlwIBAKBQOCC0gr0A1cKjNMF9ACXcchjIG3bOnA1zzgTkTivgQSO+B4Z2LT5PGLcAU5FnCSO2BADmzaQg3818Fn47wAlOOIWcCIEfAFqs/RfEr6ndj85ZUqZhZUs/O4rftPEQJHdwFLMoww+dcA3Yf8BKCMmbgA/haB9oEGxTdhMI22biJmHyiysKnl9VLF7gCcsKuJGIv3NwKHof4pHVAEpIfC3Pa1LgfeibxOoxDM6gWMh1AifFc/+AO14yqSylGQbxmOKgLUM4l8Cl/CcJPBLEb+bw0kdKx3AkfICWz5uXEk58CnDEvIqdWosZLGJTS3kJfcUscvAnnj2w5YgXnEd+CqEbtu6v0+5uLx1Wfv/C1OkvRICzV2hO2Izo8zOEzxhTBFnDrQoZbZsli95m5hps6VBVNg7oFixbVEKuh3gGjFhfqd8VOr7xgw+I8psPY/rdJ7L8Tb2t/2SBoZwzIAi4lmWvnVKxjqwdwYnlNi1K9dyTQ4xBpUP8AJH1CvZxPykKvTUTuEIeTkfzzNOBfAmEsekY6d1f6+tPAvNZHeBm+ekKxAIBAIB/ivOAM2OAh166TcAAAAAAElFTkSuQmCC"> </button>      
+
+</div>
+
+
+</div>
+
+<button class="btn2">buy</button>
+<div class="footer">
+    <div style="color:  #bcafaf;">
+        <h1 style="margin-top: 10px; color: rgb(249, 245, 245);border-radius: 12px;"> clothes</h1>
+        <h3 style="margin-top: 10px; "> shirt</h3>
+        <h3 style="margin-top: 10px;">shoes</h3>
+        <h3 style="margin-top: 10px;">tank pop</h3>
+        <h3 style="margin-top: 10px;"> perfumes</h3>
+
+
+    </div>
+
+    <div style="margin-left: 200px;color:  #bcafaf;">
+        <h1 style="margin-top: 10px;  color: rgb(249, 245, 245);border-radius: 12px;">contac us</h1>
+        <h3 style="margin-top: 10px;">contact foem</h3>
+        <h3 style="margin-top: 10px;">custome service</h3>
+        <h3 style="margin-top: 10px;"> whatsapp</h3>
+        <h3 style="margin-top: 10px;"> social media</h3>
+       
+
+    </div>
+
+    <div style="margin-left: 200px; color: #bcafaf;">
+        <h2 style="margin-top: 10px; color: rgb(249, 245, 245);border-radius: 12px;">help</h2>
+        <h3 style="margin-top: 10px;">how to pay</h3>
+        <h3 style="margin-top: 10px;">how to shop</h3>
+        <h3 style="margin-top: 10px;">return and change</h3>
+        <h3 style="margin-top: 10px;">Conditions of competition</h3>
+      
+        </div>
+
+
+</body>
+</html>

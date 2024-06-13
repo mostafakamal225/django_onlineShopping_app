@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% comment %} <link rel='stylesheet' type='text/css' media='screen' href='pdetails.css'> {% endcomment %}
+    <link href="{% static 'css/product.css' %}" rel="stylesheet">
+   
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+        </ul>
+        
+        {% block content %}
+          
+
+
+        <div class="container d-flex justify-content-center" style="margin-left: 450px;">
+            <figure class="card card-product-grid card-lg"> <a href="#" class="img-wrap" data-abc="true"> <img alt="ph" src="{{ womenprods.image.url }}  "> </a>
+                <figcaption class="info-wrap">
+                    <div class="row">
+                        <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true"> {{womenprods.name}}  </a> <span class="rated">{{post.name}}</span> </div>
+                        <div class="col-md-3 col-xs-3">
+                            <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated"></span> </div>
+                        </div>
+                    </div>
+                </figcaption>
+                <div class="bottom-wrap-payment">
+                    <figcaption class="info-wrap">
+                        <div class="row">
+                            <div class="col-md-9 col-xs-9"> <a href="#" class="title" data-abc="true"></a> {{ womenprods.descrip }} <span class="rated"></span> </div>
+                            <div class="col-md-3 col-xs-3">
+                                <div class="rating text-right"> </div>
+                            </div>
+                        </div>
+                    </figcaption>
+                </div>
+                <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Buy now </a>
+                    <div class="price-wrap"> <a href='{% url "women"%}' class="btn btn-warning float-left" data-abc="true"> Cancel </a> </div>
+                </div>
+            </figure>
+        </div>
+
+        
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+      

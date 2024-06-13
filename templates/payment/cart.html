@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% comment %} <link rel='stylesheet' type='text/css' media='screen' href='cart.css'> {% endcomment %}
+    <link href="{% static 'css/cart1.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    
+
+
+    
+</head>
+<body>
+    <div class="cover11">
+        <ul>
+          
+            
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+        </ul>
+    </div>
+   
+    <div class="container">
+        <div class="divTable div-hover">
+            
+                <div class="rowTable bg-primary text-white pb-2">
+                    <div class="divTableCol">Product</div>
+                    <div class="divTableCol">Authorized</div>
+                    <div class="divTableCol">Quantity</div>
+                    <div class="divTableCol">Price unit</div>
+                    <div class="divTableCol">Total</div>
+                    <div class="divTableCol">Actions</div>
+                </div>
+            
+            
+                <div class="rowTable">
+                    <div class="divTableCol">
+                        <div class="media">
+                            <a class=" pull-left mr-2 ml-0" href="#"> <img style="height: 200px;width: 150px;" class="img-fluid" src="{% static 'img/images (3).jfif' %}    "alt="" /></a>
+                            <!-- <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Hotel</a></h4>
+                                <h5 class="media-heading">via Catalfini, Roma <a href="#">Noto Hotel </a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Pending request</strong></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 30px;" class="divTableCol"><strong class="label label-warning">Pending</strong></div>
+                    <div class="divTableCol">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="2" placeholder="" />
+                    </div>
+                    <div class="divTableCol"><strong>300$</strong></div>
+                    <div class="divTableCol"><strong>600$</strong></div>
+                    <div class="divTableCol">
+                        <button type="button" style="background-color: gray;height: 30px;width: 75px;" class="btn btn-danger"><span class="fa fa-remove"></span> Remove</button>
+                    </div>
+                </div>
+
+
+
+                
+                <div class="rowTable">
+                    <div class="divTableCol">
+                        <div class="media">
+                            <a class=" pull-left mr-2 ml-0" href="#"> <img style="height: 200px;width: 150px;" class="img-fluid" src="{% static 'img/images (1).jfif' %}  "alt="" /></a>
+                            <!-- <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Hotel</a></h4>
+                                <h5 class="media-heading">via Catalfini, Roma <a href="#">Noto Hotel </a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Pending request</strong></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 30px;" class="divTableCol"><strong class="label label-warning">Pending</strong></div>
+                    <div class="divTableCol">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3" placeholder="" />
+                    </div>
+                    <div class="divTableCol"><strong>50$</strong></div>
+                    <div class="divTableCol"><strong>150$</strong></div>
+                    <div class="divTableCol">
+                        <button style="background-color: gray;height: 30px;width: 75px;" type="button" class="btn btn-danger"><span class="fa fa-remove"></span> Remove</button>
+                    </div>
+                </div>
+
+
+
+                
+                <div class="rowTable">
+                    <div class="divTableCol">
+                        <div class="media">
+                            <a class=" pull-left mr-2 ml-0" href="#"> <img style="height: 200px;width: 150px;" class="img-fluid" src="{% static 'img/shopping (4).webp' %} "alt="" /></a>
+                            <!-- <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Hotel</a></h4>
+                                <h5 class="media-heading">via Catalfini, Roma <a href="#">Noto Hotel </a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Pending request</strong></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 30px;" class="divTableCol"><strong class="label label-warning">Pending</strong></div>
+                    <div class="divTableCol">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="1" placeholder="0" />
+                    </div>
+                    <div class="divTableCol"><strong>200$</strong></div>
+                    <div class="divTableCol"><strong>200$</strong></div>
+                    <div class="divTableCol">
+                        <button type="button" style="background-color: gray;height: 30px;width: 75px;" class="btn btn-danger"><span class="fa fa-remove"></span> Remove</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+            
+                   
+        </div>
+    </div>
+
+    <button type="button" style="background-color: rgb(45, 15, 59);height: 40px;width: 100px;color: aliceblue ;margin-top: 100px;margin-left: 78%;margin-bottom: 150px;" class="btn btn-success">save</span></button>        
+
+
+
+<footer class="footer" style="font-family: 'Poppins', sans-serif; line-height: 1.5;	">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+

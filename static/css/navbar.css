@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+
+   
+  }
+  
+  li {
+    float: left;
+    margin-left: 100px;
+  }
+  
+  li a {
+    margin-top: 5px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 20px;
+   
+  }
+
+
+  .active {
+    background-color: rgba(234, 27, 27, 0.575);
+    
+  }
+  li a:hover:not(.active) {
+    background-color: rgba(114, 99, 99, 0.2);
+    color: white;
+  }

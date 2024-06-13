@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form </title>
+    {% comment %} <link rel="stylesheet" href="signup.css"> {% endcomment %}
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div>
+         
+        <ul>
+        
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+      </ul>
+      </div>
+
+
+
+
+    <div class="login-box" style="margin-top: 50px;">
+        <h2>SIGN UP</h2>
+        <form>
+            <div class="user-box">
+                <input type="text" name="" required="" title="#">
+                <label>first name</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required="" title="#">
+                <label>last name</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="" required="" title="#">
+                <label>phone number </label>
+            </div>
+            <div class="user-box">
+                <input  type="email" name="" required="" title="#">
+                <label>email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="" placeholder="" title="#">
+                <label>Password</label>
+            </div>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+        </form>
+    </div>
+</body>
+</html>

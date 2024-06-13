@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% comment %} <link rel='stylesheet' type='text/css' media='screen' href='about.css'> {% endcomment %}
+    <link href="{% static 'css/about.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  
+</head>
+<body>
+        <div class="cover11">
+         
+          <ul>
+          
+            <li><a style="text-decoration: none;margin-left: 20px;" class="active" href='{% url "home" %}'>Home</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "about" %}'>about</a></li>
+            <li><a style="text-decoration: none; margin-left: 20px;" href='{% url "orderrev" %}'>order review</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "blog" %}'>Blog</a></li>
+            <li ><a style="text-decoration: none; margin-left: 20px;"  href='{% url "contact" %}'>contact</a></li>
+            <li > <a style="text-decoration: none; margin-left: 20px;" style="padding-top: 8px;" href='{% url "cart" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/images.jfif' %}    " alt="ph"></a></li>
+            <li > <a class="lol" style="text-decoration: none; margin-left: 0px;" style="padding-top: 8px;" href='{% url "login" %}'><img style="height: 35px;width: 40px;" src=" {% static 'img/icons8-registration-26.png' %}     " alt="ph"></a></li>
+        
+        </ul>
+        </div>
+    
+    <div class="cover1">
+       
+          <!-- <h1 class="text">About Us</h1> -->
+
+    </div>
+
+    <div class="story" style="text-align: center;">
+        <h1 class="text1">our story </h1>
+        <h3 class="text2">Welcome to Our Story page! Here, we want to share with you the journey that led to the creation of our clothing website. It all started with a passion for fashion and a desire to provide high-quality clothing that was both stylish and affordable. Over the years, we have grown and expanded our offerings, always keeping our customers' needs and wants in mind. We are proud to offer a wide range of clothing options, from casual wear to formal attire, for men and women of all sizes. Our commitment to sustainability and ethical manufacturing practices is at the heart of everything we do.</h3>
+    </div>
+    <div class="image" style="text-align: center;">
+        <img class="img" alt="ph" src="{% static 'img/Annotation 2023-08-04 192948.png' %}">
+    </div>
+    <div class="st">
+        <h1 class="text1" style="margin-top: 100px; margin-bottom: 100px;text-align: center;">our Team </h1>
+    </div>
+
+
+
+    <div class="card-group">
+      
+      {% block content %}
+    {% for post in posts %}
+
+      
+      <div class="card">
+          <img src  = "{{ post.image.url }} " class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">our team</h5>
+            <p class="card-text">{{post.name}}     </p>
+            <p class="card-text"><small class="text-muted">{{post.descrip}} </small></p>
+          </div>
+        </div>
+
+        {% endfor %}
+        {% endblock %}
+        
+        {% comment %} <div class="card">
+          <img src="  {% static 'img/d9dbc95e43b40195a1733c8ae8e7c899.jpg' %}          " class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">our team</h5>
+            <p class="card-text">marie john</p>
+            <p class="card-text"><small class="text-muted">Creative art</small></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src=" {% static 'img/7a909cb879e633d5d5852c668bb5a4c6.jpg' %}     " class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">our team</h5>
+            <p class="card-text">adlle charles</p>
+            <p class="card-text"><small class="text-muted">Creative art</small></p>
+          </div>
+        </div> {% endcomment %}
+
+
+      </div>
+
+
+
+
+
+      <footer class="footer" style="font-family: 'Poppins', sans-serif; line-height: 1.5;margin-top: 100px;	">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4 style="margin-left: 36px;" >company</h4>
+              <ul >
+                <li><a href="#">about us</a></li>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">affiliate program</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 style="margin-left: 36px;" >get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">shipping</a></li>
+                <li><a href="#">returns</a></li>
+                <li><a href="#">order status</a></li>
+                <li><a href="#">payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 style="margin-left: 36px;">online shop</h4>
+              <ul >
+                <li><a href="#">watch</a></li>
+                <li><a href="#">bag</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">dress</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#">    <i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </footer>
+
+    
+
+
+
+</body>
+</html>
